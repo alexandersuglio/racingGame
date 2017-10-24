@@ -12,7 +12,7 @@ body {
 
 @font-face {
     font-family: 'kindly-rewind';
-    src: url('./kindlyRewind/Kindly_Rewind.ttf');
+    src: url('./media/kindlyRewind/Kindly_Rewind.ttf');
 }
 
 .introParent {

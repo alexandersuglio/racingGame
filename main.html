@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+
+<body>
+<audio src="ingameMusic.mp3" autoplay="autoplay" loop="loop"></audio>
+    <h1>Score: _ _ _ _ </h1>
+    <div id='gameBorder'>
+        
+        <div id="road">
+            <img id='bronco' src="./Game_Pieces/broncoGamePiece.png" alt="" />
+            <div class="roadLines">
+            </div>
+                
+            </div>
+     
+    </div>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+
+        background-color: black;
+
+    }
+
+
+    h1 {
+        font-family: 'kindly-rewind';
+        color: white;
+        font-size: 1vw;
+        margin-top: 10vh;
+        margin-left: 2vw;
+        display: inline-block;
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: 'kindly-rewind';
+        src: url('./kindlyRewind/Kindly_Rewind.ttf');
+    }
+
+    #gameBorder {
+        margin-top: 2vh;
+        height: 50vh;
+        /*width: 100%;*/
+        /*left: 0;*/
+        /*background-color: green;*/
+        /*background-repeat: no-repeat;*/
+       /*   animation: grassMove linear 2s;
+        animation-iteration-count: infinite;*/
+
+    }
+/*#grass{
+        background-image: url('https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1555779/300/200/m1/fpnw/wm0/bright-green-pixelated-grass-background-seamless-pattern-.jpg?1471227157&s=5231ad2e2673259d3a21e4cf04246e23');
+            animation: grassMove linear 2s;
+        animation-iteration-count: infinite;
+}
+    @keyframes grassMove {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        100% {
+            transform: translate(-40%, 0px);
+        }
+    }*/
+
+
+    #road {
+        position: absolute;
+        height: 25vh;
+        width: 100%;
+        margin-top: 13vh;
+        /*background: linear-gradient(#292929, #858687, #292929);*/
+        background-color: #202226;
+        overflow: hidden;
+        border-top: #d1cccc 10px solid;
+           border-bottom: #d1cccc 10px solid;
+
+    }
+
+    #bronco {
+        position: relative;
+        top: 15vh;
+        left: 2vw;
+        width: 8%;
+        z-index: 1;
+        animation: carAnim linear .5s infinite;
+    }
+
+    @keyframes carAnim {
+         0% {
+            transform: translateY(1px);
+        }
+        100% {
+            transform: translateY(2px);
+        }
+        
+    }
+
+
+    .roadLines {
+        position: relative;
+        top: 15%;
+        width: 200%;
+        height: .5em;
+        background: repeating-linear-gradient(110deg, rgba(234, 230, 9, 0.6) 0%, rgba(234, 230, 9, 0.6) 2.5%, transparent 2.5%, transparent 5%);
+        /*left: 0;*/
+        animation: lineMove linear 3s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes lineMove {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        100% {
+            transform: translate(-40%, 0px);
+        }
+    }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
